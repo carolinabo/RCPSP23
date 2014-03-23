@@ -1,105 +1,105 @@
 set r / 
-r1
+r2
 /; 
 
 set j / 
 Q 
-j1
-j2
-j3
-j4
-j5
-j6
-j7
-j8
-j9
+j10
+j11
+j12
+j13
+j14
+j15
+j16
+j17
+j18
 S 
 /; 
 
 set t /t0*t33/; 
 
 VN(h,j)=no; 
-VN('Q','j1')=yes;
-VN('j1','S')=yes;
-VN('Q','j2')=yes;
-VN('j2','S')=yes;
-VN('Q','j3')=yes;
-VN('j3','S')=yes;
-VN('Q','j4')=yes;
-VN('j4','S')=yes;
-VN('Q','j5')=yes;
-VN('j5','S')=yes;
-VN('Q','j6')=yes;
-VN('j6','S')=yes;
-VN('Q','j7')=yes;
-VN('j7','S')=yes;
-VN('Q','j8')=yes;
-VN('j8','S')=yes;
-VN('Q','j9')=yes;
-VN('j9','S')=yes;
+VN('Q','j10')=yes;
+VN('j10','S')=yes;
+VN('Q','j11')=yes;
+VN('j11','S')=yes;
+VN('Q','j12')=yes;
+VN('j12','S')=yes;
+VN('Q','j13')=yes;
+VN('j13','S')=yes;
+VN('Q','j14')=yes;
+VN('j14','S')=yes;
+VN('Q','j15')=yes;
+VN('j15','S')=yes;
+VN('Q','j16')=yes;
+VN('j16','S')=yes;
+VN('Q','j17')=yes;
+VN('j17','S')=yes;
+VN('Q','j18')=yes;
+VN('j18','S')=yes;
 
-VN('j1','j2')=yes; 
-VN('j1','j3')=yes; 
-VN('j2','j4')=yes; 
-VN('j3','j7')=yes; 
-VN('j4','j5')=yes; 
-VN('j4','j6')=yes; 
-VN('j5','j8')=yes; 
-VN('j5','j9')=yes; 
-VN('j6','j7')=yes; 
-VN('j7','j9')=yes; 
+VN('j10','j11')=yes; 
+VN('j10','j12')=yes; 
+VN('j11','j13')=yes; 
+VN('j12','j16')=yes; 
+VN('j13','j14')=yes; 
+VN('j13','j15')=yes; 
+VN('j14','j17')=yes; 
+VN('j14','j18')=yes; 
+VN('j15','j16')=yes; 
+VN('j16','j18')=yes; 
 
 parameter 
 d(j) / 
 Q   0
 S   0
-j1   2
-j2   4
-j3   3
-j4   7
-j5   2
-j6   1
-j7   5
-j8   2
-j9   7
+j10   2
+j11   4
+j12   3
+j13   7
+j14   2
+j15   1
+j16   5
+j17   2
+j18   7
 /
 FEZ(j) /
 Q   0
 S   0
-j1   2
-j2   6
-j3   5
-j4   13
-j5   15
-j6   14
-j7   19
-j8   17
-j9   26
+j10   2
+j11   6
+j12   5
+j13   13
+j14   15
+j15   14
+j16   19
+j17   17
+j18   26
 /
 SEZ(j) /
 Q   0
 S 33
-j1   2
-j2   6
-j3   14
-j4   13
-j5   19
-j6   14
-j7   19
-j8   26
-j9   26
+j10   2
+j11   6
+j12   14
+j13   13
+j14   19
+j15   14
+j16   19
+j17   26
+j18   26
 /
 Kap(r) /
-r1   9
+r2   9
 /;
 
 k(j,r)=0;
-k('j1','r1')=1;
-k('j2','r1')=2;
-k('j3','r1')=6;
-k('j4','r1')=1;
-k('j5','r1')=1;
-k('j6','r1')=2;
-k('j7','r1')=2;
-k('j8','r1')=1;
-k('j9','r1')=8;
+k('j10','r2')=1;
+k('j11','r2')=2;
+k('j12','r2')=6;
+k('j13','r2')=1;
+k('j14','r2')=1;
+k('j15','r2')=2;
+k('j16','r2')=2;
+k('j17','r2')=1;
+k('j18','r2')=8;

@@ -10,6 +10,15 @@ class JobsController < ApplicationController
     @job = Job.new
   end
 
+
+#  def show
+#    @job = Job.find(params[:id])
+#  end
+
+#  def edit
+#    @job = Job.find(params[:id])
+#  end
+
   def create
     @job = Job.new (params[:job])
     if @job.save
@@ -20,14 +29,6 @@ class JobsController < ApplicationController
     end
   end
 
-
-  def show
-    @job = Job.find(params[:id])
-  end
-
-  def edit
-    @job = Job.find(params[:id])
-  end
 
   def update
     @job = Job.find(params[:id])
@@ -47,67 +48,14 @@ class JobsController < ApplicationController
     redirect_to jobs_path
   end
 
-   def calc_fezsez
-     @jobs = Job.all
-     @jobs.each { |jo|
-      jo.fez = jo.duration
-      @relations = Relation.all
-      @relations.each {|re|
-      if jo.id == re.successor_id
-        if jo.fez < re.job.fez+jo.duration
-          jo.fez = re.job.fez + jo.duration
-        end
-      end
-      jo.save
-      }
-     }
 
-     @jobs.each{|jo|
-      jo.sez = Job.maximum('fez')
-      @relations.each{|re|
-      if jo.id == re.job_id
-        jo.sez = Job.sum('duration')
-      end
-      jo.ssz = jo.sez-jo.duration
-      jo.save
-      }
-     }
-
-     @jobs.reverse_each{|jo|
-      @relations.each{|re|
-      if jo.id == re.job_id
-        if jo.sez > re.successor.ssz then
-          jo.sez = re.successor.ssz
-          jo.save
-        end
-      end
-      }
-      jo.ssz = jo.sez - jo.duration
-      jo.save
-     }
-
-
-
-
-    flash[:success]="FEZ and SEZ calculated!"
-    redirect_to jobs_path
-    end
-
-  def delete_solution
-
+  def load_project
     if File.exists?("Outputfile.txt")
       File.delete("Outputfile.txt")
     end
-
-    @jobs = Job.all
-    @jobs.each { |jo|
-      jo.begin=nil
-      jo.end=nil
-      jo.save
-    }
-
-    @objective_function_value=nil
-    flash[:success] = "Solution destroyed!"
+    system "rake db:reset_data"
+    system "rake db:sample_project"
+    flash[:success] = "Sample Project loaded!"
     redirect_to current_user
   end
 
@@ -115,6 +63,44 @@ class JobsController < ApplicationController
     if File.exist?("Inputfile.inc")
       File.delete("Inputfile.inc")
     end
+
+    @jobs = Job.all
+    @jobs.each { |jo|
+      jo.fez = jo.duration
+      @relations = Relation.all
+      @relations.each {|re|
+        if jo.id == re.successor_id
+          if jo.fez < re.job.fez+jo.duration
+            jo.fez = re.job.fez + jo.duration
+          end
+        end
+        jo.save
+      }
+    }
+
+    @jobs.each{|jo|
+      jo.sez = Job.maximum('fez')
+      @relations.each{|re|
+        if jo.id == re.job_id
+          jo.sez = Job.sum('duration')
+        end
+        jo.ssz = jo.sez-jo.duration
+        jo.save
+      }
+    }
+
+    @jobs.reverse_each{|jo|
+      @relations.each{|re|
+        if jo.id == re.job_id
+          if jo.sez > re.successor.ssz then
+            jo.sez = re.successor.ssz
+            jo.save
+          end
+        end
+      }
+      jo.ssz = jo.sez - jo.duration
+      jo.save
+    }
 
     f=File.new("Inputfile.inc", "w")
 
@@ -211,16 +197,23 @@ class JobsController < ApplicationController
     end
   end
 
-
-  def load_project
+  def delete_solution
     if File.exists?("Outputfile.txt")
       File.delete("Outputfile.txt")
     end
-    system "rake db:reset_data"
-    system "rake db:sample_project"
-    flash[:success] = "Sample Project loaded!"
+
+    @jobs = Job.all
+    @jobs.each { |jo|
+      jo.begin=nil
+      jo.end=nil
+      jo.save
+    }
+
+    @objective_function_value=nil
+    flash[:success] = "Solution destroyed!"
     redirect_to current_user
   end
+
 
 
   private

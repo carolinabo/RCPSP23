@@ -12,8 +12,6 @@ Objective function value: <b><%=   @objective_function_value %></b><br>   <br>  
         <th>Begin</th>
         <th>End</th>
         <th></th>
-        <th></th>
-        <th></th>
       </tr>
 
       <% @jobs.each do |job| %>
@@ -24,9 +22,7 @@ Objective function value: <b><%=   @objective_function_value %></b><br>   <br>  
             <td><%= job.sez %></td>
             <td><%= job.begin %></td>
             <td><%= job.end %></td>
-            <td><%= link_to 'Show', job %></td>
-            <td><%= link_to 'Update', edit_job_path(job) %></td>
-            <td><%= link_to 'Destroy', job, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+              <td><%= link_to 'Destroy', job, method: :delete, data: {confirm: 'Are you sure?'} %></td>
           </tr>
       <% end %>
     </table>
@@ -37,17 +33,13 @@ Objective function value: <b><%=   @objective_function_value %></b><br>   <br>  
       <tr>
         <th>Name</th>
         <th>Duration</th>
-        <th>FEZ</th>
-        <th>SEZ</th>
-        <th></th>
+       <th></th>
       </tr>
 
       <% @jobs.each do |job| %>
           <tr>
             <td><%= job.name %></td>
             <td><%= job.duration %></td>
-            <td><%= job.fez %></td>
-            <td><%= job.sez %></td>
             <td><%= link_to 'Destroy', job, method: :delete, data: {confirm: 'Are you sure?'} %></td>
           </tr>
       <% end %>
