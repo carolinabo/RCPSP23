@@ -38,8 +38,8 @@ Objective function value: <b><%=   @objective_function_value %></b><br>   <br>  
 
       <% @jobs.each do |job| %>
           <tr>
-            <td><%= job.name %></td>
-            <td><%= job.duration %></td>
+            <td><%= best_in_place job, :name, :type => :input %></td>
+            <td><%= best_in_place job, :duration, :type => :input %></td>
             <td><%= link_to 'Destroy', job, method: :delete, data: {confirm: 'Are you sure?'} %></td>
           </tr>
       <% end %>
