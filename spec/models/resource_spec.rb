@@ -22,7 +22,7 @@ describe Resource do
   end
 
   describe "when name is too long" do
-    before { @resource.name = "a" * 26 }
+    before { @resource.name = "a" * 51 }
     it { should_not be_valid }
   end
 

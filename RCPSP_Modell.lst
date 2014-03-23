@@ -1,4 +1,4 @@
-GAMS 24.1.3  r41464 Released Jul 26, 2013 WEX-WEI x86_64/MS Windows                                                                                                                                                                    03/23/14 11:00:09 Page 1
+GAMS 24.2.1  r43572 Released Dec  9, 2013 WEX-WEI x86_64/MS Windows                                                                                                                                                                    03/23/14 16:51:06 Page 1
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -28,122 +28,122 @@ C o m p i l a t i o n
   23  free variables
   24    z       Zielfunktionswert;
   25   
-INCLUDE    C:\Sites\RCPSP_Toooool\inputfile.inc
+INCLUDE    C:\Sites\RCPSP_Toy23\inputfile.inc
   27  set r /
-  28  r5
+  28  r1
   29  /;
   30   
   31  set j /
   32  Q
-  33  j37
-  34  j38
-  35  j39
-  36  j40
-  37  j41
-  38  j42
-  39  j43
-  40  j44
-  41  j45
+  33  j1
+  34  j2
+  35  j3
+  36  j4
+  37  j5
+  38  j6
+  39  j7
+  40  j8
+  41  j9
   42  S
   43  /;
   44   
   45  set t /t0*t33/;
   46   
   47  VN(h,j)=no;
-  48  VN('Q','j37')=yes;
-  49  VN('j37','S')=yes;
-  50  VN('Q','j38')=yes;
-  51  VN('j38','S')=yes;
-  52  VN('Q','j39')=yes;
-  53  VN('j39','S')=yes;
-GAMS 24.1.3  r41464 Released Jul 26, 2013 WEX-WEI x86_64/MS Windows                                                                                                                                                                    03/23/14 11:00:09 Page 2
+  48  VN('Q','j1')=yes;
+  49  VN('j1','S')=yes;
+  50  VN('Q','j2')=yes;
+  51  VN('j2','S')=yes;
+  52  VN('Q','j3')=yes;
+  53  VN('j3','S')=yes;
+GAMS 24.2.1  r43572 Released Dec  9, 2013 WEX-WEI x86_64/MS Windows                                                                                                                                                                    03/23/14 16:51:06 Page 2
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
 
-  54  VN('Q','j40')=yes;
-  55  VN('j40','S')=yes;
-  56  VN('Q','j41')=yes;
-  57  VN('j41','S')=yes;
-  58  VN('Q','j42')=yes;
-  59  VN('j42','S')=yes;
-  60  VN('Q','j43')=yes;
-  61  VN('j43','S')=yes;
-  62  VN('Q','j44')=yes;
-  63  VN('j44','S')=yes;
-  64  VN('Q','j45')=yes;
-  65  VN('j45','S')=yes;
+  54  VN('Q','j4')=yes;
+  55  VN('j4','S')=yes;
+  56  VN('Q','j5')=yes;
+  57  VN('j5','S')=yes;
+  58  VN('Q','j6')=yes;
+  59  VN('j6','S')=yes;
+  60  VN('Q','j7')=yes;
+  61  VN('j7','S')=yes;
+  62  VN('Q','j8')=yes;
+  63  VN('j8','S')=yes;
+  64  VN('Q','j9')=yes;
+  65  VN('j9','S')=yes;
   66   
-  67  VN('j37','j38')=yes;
-  68  VN('j37','j39')=yes;
-  69  VN('j38','j40')=yes;
-  70  VN('j39','j43')=yes;
-  71  VN('j40','j41')=yes;
-  72  VN('j40','j42')=yes;
-  73  VN('j41','j44')=yes;
-  74  VN('j41','j45')=yes;
-  75  VN('j42','j43')=yes;
-  76  VN('j43','j45')=yes;
+  67  VN('j1','j2')=yes;
+  68  VN('j1','j3')=yes;
+  69  VN('j2','j4')=yes;
+  70  VN('j3','j7')=yes;
+  71  VN('j4','j5')=yes;
+  72  VN('j4','j6')=yes;
+  73  VN('j5','j8')=yes;
+  74  VN('j5','j9')=yes;
+  75  VN('j6','j7')=yes;
+  76  VN('j7','j9')=yes;
   77   
   78  parameter
   79  d(j) /
   80  Q   0
   81  S   0
-  82  j37   2
-  83  j38   4
-  84  j39   3
-  85  j40   7
-  86  j41   2
-  87  j42   1
-  88  j43   5
-  89  j44   2
-  90  j45   7
+  82  j1   2
+  83  j2   4
+  84  j3   3
+  85  j4   7
+  86  j5   2
+  87  j6   1
+  88  j7   5
+  89  j8   2
+  90  j9   7
   91  /
   92  FEZ(j) /
   93  Q   0
   94  S   0
-  95  j37   2
-  96  j38   6
-  97  j39   5
-  98  j40   13
-  99  j41   15
- 100  j42   14
- 101  j43   19
- 102  j44   17
- 103  j45   26
+  95  j1   2
+  96  j2   6
+  97  j3   5
+  98  j4   13
+  99  j5   15
+ 100  j6   14
+ 101  j7   19
+ 102  j8   17
+ 103  j9   26
  104  /
  105  SEZ(j) /
  106  Q   0
-GAMS 24.1.3  r41464 Released Jul 26, 2013 WEX-WEI x86_64/MS Windows                                                                                                                                                                    03/23/14 11:00:09 Page 3
+GAMS 24.2.1  r43572 Released Dec  9, 2013 WEX-WEI x86_64/MS Windows                                                                                                                                                                    03/23/14 16:51:06 Page 3
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
 
  107  S 33
- 108  j37   2
- 109  j38   6
- 110  j39   14
- 111  j40   13
- 112  j41   19
- 113  j42   14
- 114  j43   19
- 115  j44   26
- 116  j45   26
+ 108  j1   2
+ 109  j2   6
+ 110  j3   14
+ 111  j4   13
+ 112  j5   19
+ 113  j6   14
+ 114  j7   19
+ 115  j8   26
+ 116  j9   26
  117  /
  118  Kap(r) /
- 119  r5   9
+ 119  r1   9
  120  /;
  121   
  122  k(j,r)=0;
- 123  k('j37','r5')=1;
- 124  k('j38','r5')=2;
- 125  k('j39','r5')=6;
- 126  k('j40','r5')=1;
- 127  k('j41','r5')=1;
- 128  k('j42','r5')=2;
- 129  k('j43','r5')=2;
- 130  k('j44','r5')=1;
- 131  k('j45','r5')=8;
+ 123  k('j1','r1')=1;
+ 124  k('j2','r1')=2;
+ 125  k('j3','r1')=6;
+ 126  k('j4','r1')=1;
+ 127  k('j5','r1')=1;
+ 128  k('j6','r1')=2;
+ 129  k('j7','r1')=2;
+ 130  k('j8','r1')=1;
+ 131  k('j9','r1')=8;
  132   
  133   
  134  Equations
@@ -172,7 +172,7 @@ C o m p i l a t i o n
  157      Kapazitaetsrestriktion
  158      /;
  159   
-GAMS 24.1.3  r41464 Released Jul 26, 2013 WEX-WEI x86_64/MS Windows                                                                                                                                                                    03/23/14 11:00:09 Page 4
+GAMS 24.2.1  r43572 Released Dec  9, 2013 WEX-WEI x86_64/MS Windows                                                                                                                                                                    03/23/14 16:51:06 Page 4
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -204,19 +204,19 @@ C o m p i l a t i o n
  184   
  185  putclose outputfile;
  186   
-GAMS 24.1.3  r41464 Released Jul 26, 2013 WEX-WEI x86_64/MS Windows                                                                                                                                                                    03/23/14 11:00:09 Page 5
+GAMS 24.2.1  r43572 Released Dec  9, 2013 WEX-WEI x86_64/MS Windows                                                                                                                                                                    03/23/14 16:51:06 Page 5
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Include File Summary
 
 
    SEQ   GLOBAL TYPE      PARENT   LOCAL  FILENAME
 
-     1        1 INPUT          0       0  C:\Sites\RCPSP_Toooool\RCPSP_Modell.gms
-     2       26 INCLUDE        1      26  .C:\Sites\RCPSP_Toooool\inputfile.inc
+     1        1 INPUT          0       0  C:\Sites\RCPSP_Toy23\RCPSP_Modell.gms
+     2       26 INCLUDE        1      26  .C:\Sites\RCPSP_Toy23\inputfile.inc
 
 
-COMPILATION TIME     =        0.000 SECONDS      3 MB  24.1.3 r41464 WEX-WEI
-GAMS 24.1.3  r41464 Released Jul 26, 2013 WEX-WEI x86_64/MS Windows                                                                                                                                                                    03/23/14 11:00:09 Page 6
+COMPILATION TIME     =        0.000 SECONDS      3 MB  24.2.1 r43572 WEX-WEI
+GAMS 24.2.1  r43572 Released Dec  9, 2013 WEX-WEI x86_64/MS Windows                                                                                                                                                                    03/23/14 16:51:06 Page 6
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE RCPSP Using MIP From line 163
 
@@ -232,41 +232,41 @@ Zielfunktion..  - x(S,t1) - 2*x(S,t2) - 3*x(S,t3) - 4*x(S,t4) - 5*x(S,t5) - 6*x(
 
 JederVorgangEinmal(Q)..  x(Q,t0) + x(Q,t1) =E= 1 ; (LHS = 0, INFES = 1 ****)
      
-JederVorgangEinmal(j37)..  x(j37,t2) + x(j37,t3) =E= 1 ; (LHS = 0, INFES = 1 ****)
+JederVorgangEinmal(j1)..  x(j1,t2) + x(j1,t3) =E= 1 ; (LHS = 0, INFES = 1 ****)
      
-JederVorgangEinmal(j38)..  x(j38,t6) + x(j38,t7) =E= 1 ; (LHS = 0, INFES = 1 ****)
+JederVorgangEinmal(j2)..  x(j2,t6) + x(j2,t7) =E= 1 ; (LHS = 0, INFES = 1 ****)
      
 REMAINING 8 ENTRIES SKIPPED
 
 
 ---- Projektstruktur  =L=  
 
-Projektstruktur(Q,j37)..  x(Q,t1) - x(j37,t3) =L= 0 ; (LHS = 0)
+Projektstruktur(Q,j1)..  x(Q,t1) - x(j1,t3) =L= 0 ; (LHS = 0)
      
-Projektstruktur(Q,j38)..  x(Q,t1) - 2*x(j38,t6) - 3*x(j38,t7) =L= 0 ; (LHS = 0)
+Projektstruktur(Q,j2)..  x(Q,t1) - 2*x(j2,t6) - 3*x(j2,t7) =L= 0 ; (LHS = 0)
      
-Projektstruktur(Q,j39)..  x(Q,t1) - 2*x(j39,t5) - 3*x(j39,t6) - 4*x(j39,t7) - 5*x(j39,t8) - 6*x(j39,t9) - 7*x(j39,t10) - 8*x(j39,t11) - 9*x(j39,t12) - 10*x(j39,t13) - 11*x(j39,t14) - 12*x(j39,t15) =L= 0 ; (LHS = 0)
+Projektstruktur(Q,j3)..  x(Q,t1) - 2*x(j3,t5) - 3*x(j3,t6) - 4*x(j3,t7) - 5*x(j3,t8) - 6*x(j3,t9) - 7*x(j3,t10) - 8*x(j3,t11) - 9*x(j3,t12) - 10*x(j3,t13) - 11*x(j3,t14) - 12*x(j3,t15) =L= 0 ; (LHS = 0)
      
 REMAINING 25 ENTRIES SKIPPED
 
 
 ---- Kapazitaetsrestriktion  =L=  
 
-Kapazitaetsrestriktion(r5,t0)..  x(j37,t0) + x(j37,t1) + 2*x(j38,t0) + 2*x(j38,t1) + 2*x(j38,t2) + 2*x(j38,t3) + 6*x(j39,t0) + 6*x(j39,t1) + 6*x(j39,t2) + x(j40,t0) + x(j40,t1) + x(j40,t2) + x(j40,t3) + x(j40,t4) + x(j40,t5) + x(j40,t6) + x(j41,t0)
+Kapazitaetsrestriktion(r1,t0)..  x(j1,t0) + x(j1,t1) + 2*x(j2,t0) + 2*x(j2,t1) + 2*x(j2,t2) + 2*x(j2,t3) + 6*x(j3,t0) + 6*x(j3,t1) + 6*x(j3,t2) + x(j4,t0) + x(j4,t1) + x(j4,t2) + x(j4,t3) + x(j4,t4) + x(j4,t5) + x(j4,t6) + x(j5,t0) + x(j5,t1) + 2*x(j6,t0)
      
-      + x(j41,t1) + 2*x(j42,t0) + 2*x(j43,t0) + 2*x(j43,t1) + 2*x(j43,t2) + 2*x(j43,t3) + 2*x(j43,t4) + x(j44,t0) + x(j44,t1) + 8*x(j45,t0) + 8*x(j45,t1) + 8*x(j45,t2) + 8*x(j45,t3) + 8*x(j45,t4) + 8*x(j45,t5) + 8*x(j45,t6) =L= 9 ; (LHS = 0)
+      + 2*x(j7,t0) + 2*x(j7,t1) + 2*x(j7,t2) + 2*x(j7,t3) + 2*x(j7,t4) + x(j8,t0) + x(j8,t1) + 8*x(j9,t0) + 8*x(j9,t1) + 8*x(j9,t2) + 8*x(j9,t3) + 8*x(j9,t4) + 8*x(j9,t5) + 8*x(j9,t6) =L= 9 ; (LHS = 0)
      
-Kapazitaetsrestriktion(r5,t1)..  x(j37,t1) + x(j37,t2) + 2*x(j38,t1) + 2*x(j38,t2) + 2*x(j38,t3) + 2*x(j38,t4) + 6*x(j39,t1) + 6*x(j39,t2) + 6*x(j39,t3) + x(j40,t1) + x(j40,t2) + x(j40,t3) + x(j40,t4) + x(j40,t5) + x(j40,t6) + x(j40,t7) + x(j41,t1)
+Kapazitaetsrestriktion(r1,t1)..  x(j1,t1) + x(j1,t2) + 2*x(j2,t1) + 2*x(j2,t2) + 2*x(j2,t3) + 2*x(j2,t4) + 6*x(j3,t1) + 6*x(j3,t2) + 6*x(j3,t3) + x(j4,t1) + x(j4,t2) + x(j4,t3) + x(j4,t4) + x(j4,t5) + x(j4,t6) + x(j4,t7) + x(j5,t1) + x(j5,t2) + 2*x(j6,t1)
      
-      + x(j41,t2) + 2*x(j42,t1) + 2*x(j43,t1) + 2*x(j43,t2) + 2*x(j43,t3) + 2*x(j43,t4) + 2*x(j43,t5) + x(j44,t1) + x(j44,t2) + 8*x(j45,t1) + 8*x(j45,t2) + 8*x(j45,t3) + 8*x(j45,t4) + 8*x(j45,t5) + 8*x(j45,t6) + 8*x(j45,t7) =L= 9 ; (LHS = 0)
+      + 2*x(j7,t1) + 2*x(j7,t2) + 2*x(j7,t3) + 2*x(j7,t4) + 2*x(j7,t5) + x(j8,t1) + x(j8,t2) + 8*x(j9,t1) + 8*x(j9,t2) + 8*x(j9,t3) + 8*x(j9,t4) + 8*x(j9,t5) + 8*x(j9,t6) + 8*x(j9,t7) =L= 9 ; (LHS = 0)
      
-Kapazitaetsrestriktion(r5,t2)..  x(j37,t2) + x(j37,t3) + 2*x(j38,t2) + 2*x(j38,t3) + 2*x(j38,t4) + 2*x(j38,t5) + 6*x(j39,t2) + 6*x(j39,t3) + 6*x(j39,t4) + x(j40,t2) + x(j40,t3) + x(j40,t4) + x(j40,t5) + x(j40,t6) + x(j40,t7) + x(j40,t8) + x(j41,t2)
+Kapazitaetsrestriktion(r1,t2)..  x(j1,t2) + x(j1,t3) + 2*x(j2,t2) + 2*x(j2,t3) + 2*x(j2,t4) + 2*x(j2,t5) + 6*x(j3,t2) + 6*x(j3,t3) + 6*x(j3,t4) + x(j4,t2) + x(j4,t3) + x(j4,t4) + x(j4,t5) + x(j4,t6) + x(j4,t7) + x(j4,t8) + x(j5,t2) + x(j5,t3) + 2*x(j6,t2)
      
-      + x(j41,t3) + 2*x(j42,t2) + 2*x(j43,t2) + 2*x(j43,t3) + 2*x(j43,t4) + 2*x(j43,t5) + 2*x(j43,t6) + x(j44,t2) + x(j44,t3) + 8*x(j45,t2) + 8*x(j45,t3) + 8*x(j45,t4) + 8*x(j45,t5) + 8*x(j45,t6) + 8*x(j45,t7) + 8*x(j45,t8) =L= 9 ; (LHS = 0)
+      + 2*x(j7,t2) + 2*x(j7,t3) + 2*x(j7,t4) + 2*x(j7,t5) + 2*x(j7,t6) + x(j8,t2) + x(j8,t3) + 8*x(j9,t2) + 8*x(j9,t3) + 8*x(j9,t4) + 8*x(j9,t5) + 8*x(j9,t6) + 8*x(j9,t7) + 8*x(j9,t8) =L= 9 ; (LHS = 0)
      
 REMAINING 31 ENTRIES SKIPPED
 
-GAMS 24.1.3  r41464 Released Jul 26, 2013 WEX-WEI x86_64/MS Windows                                                                                                                                                                    03/23/14 11:00:09 Page 7
+GAMS 24.2.1  r43572 Released Dec  9, 2013 WEX-WEI x86_64/MS Windows                                                                                                                                                                    03/23/14 16:51:06 Page 7
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE RCPSP Using MIP From line 163
 
@@ -280,19 +280,19 @@ x(Q,t0)
 x(Q,t1)
                 (.LO, .L, .UP, .M = 0, 0, 1, 0)
         1       JederVorgangEinmal(Q)
-        1       Projektstruktur(Q,j37)
-        1       Projektstruktur(Q,j38)
-        1       Projektstruktur(Q,j39)
-        1       Projektstruktur(Q,j40)
-        1       Projektstruktur(Q,j41)
-        1       Projektstruktur(Q,j42)
-        1       Projektstruktur(Q,j43)
-        1       Projektstruktur(Q,j44)
-        1       Projektstruktur(Q,j45)
+        1       Projektstruktur(Q,j1)
+        1       Projektstruktur(Q,j2)
+        1       Projektstruktur(Q,j3)
+        1       Projektstruktur(Q,j4)
+        1       Projektstruktur(Q,j5)
+        1       Projektstruktur(Q,j6)
+        1       Projektstruktur(Q,j7)
+        1       Projektstruktur(Q,j8)
+        1       Projektstruktur(Q,j9)
 
-x(j37,t0)
+x(j1,t0)
                 (.LO, .L, .UP, .M = 0, 0, 1, 0)
-        1       Kapazitaetsrestriktion(r5,t0)
+        1       Kapazitaetsrestriktion(r1,t0)
 
 REMAINING 339 ENTRIES SKIPPED
 
@@ -302,7 +302,7 @@ z
                 (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
         1       Zielfunktion
 
-GAMS 24.1.3  r41464 Released Jul 26, 2013 WEX-WEI x86_64/MS Windows                                                                                                                                                                    03/23/14 11:00:09 Page 8
+GAMS 24.2.1  r43572 Released Dec  9, 2013 WEX-WEI x86_64/MS Windows                                                                                                                                                                    03/23/14 16:51:06 Page 8
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Model Statistics    SOLVE RCPSP Using MIP From line 163
 
@@ -314,11 +314,11 @@ BLOCKS OF VARIABLES           2     SINGLE VARIABLES          343
 NON ZERO ELEMENTS         1,632     DISCRETE VARIABLES        342
 
 
-GENERATION TIME      =        0.015 SECONDS      4 MB  24.1.3 r41464 WEX-WEI
+GENERATION TIME      =        0.031 SECONDS      4 MB  24.2.1 r43572 WEX-WEI
 
 
-EXECUTION TIME       =        0.031 SECONDS      4 MB  24.1.3 r41464 WEX-WEI
-GAMS 24.1.3  r41464 Released Jul 26, 2013 WEX-WEI x86_64/MS Windows                                                                                                                                                                    03/23/14 11:00:09 Page 9
+EXECUTION TIME       =        0.031 SECONDS      4 MB  24.2.1 r43572 WEX-WEI
+GAMS 24.2.1  r43572 Released Dec  9, 2013 WEX-WEI x86_64/MS Windows                                                                                                                                                                    03/23/14 16:51:06 Page 9
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE RCPSP Using MIP From line 163
 
@@ -336,15 +336,17 @@ Solution Report     SOLVE RCPSP Using MIP From line 163
  RESOURCE USAGE, LIMIT          0.031      1000.000
  ITERATION COUNT, LIMIT         0    2000000000
 
-IBM ILOG CPLEX   24.1.3 r41464 Released Jul 26, 2013 WEI x86_64/MS Windows    
+IBM ILOG CPLEX   24.2.1 r43572 Released Dec  9, 2013 WEI x86_64/MS Windows    
 --- GAMS/Cplex licensed for continuous and discrete problems.
-Cplex 12.5.1.0
+Cplex 12.6.0.0
 
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
 MIP status(101): integer optimal solution
-Cplex Time: 0.00sec (det. 1.20 ticks)
+Cplex Time: 0.00sec (det. 1.19 ticks)
 Fixing integer variables, and solving final LP...
 Fixed MIP status(1): optimal
-Cplex Time: 0.01sec (det. 0.18 ticks)
+Cplex Time: 0.00sec (det. 0.18 ticks)
 Proven optimal solution.
 
 MIP Solution:           26.000000    (0 iterations, 0 nodes)
@@ -361,78 +363,78 @@ Relative gap:            0.000000
 
 ---- EQU JederVorgangEinmal  
 
-           LOWER          LEVEL          UPPER         MARGINAL
+          LOWER          LEVEL          UPPER         MARGINAL
 
-Q           1.0000         1.0000         1.0000          .          
-j37         1.0000         1.0000         1.0000          .          
-j38         1.0000         1.0000         1.0000          .          
-j39         1.0000         1.0000         1.0000          .          
-j40         1.0000         1.0000         1.0000          .          
-j41         1.0000         1.0000         1.0000          .          
-j42         1.0000         1.0000         1.0000          .          
-j43         1.0000         1.0000         1.0000          .          
-j44         1.0000         1.0000         1.0000          .          
-j45         1.0000         1.0000         1.0000          .          
-S           1.0000         1.0000         1.0000          .          
-GAMS 24.1.3  r41464 Released Jul 26, 2013 WEX-WEI x86_64/MS Windows                                                                                                                                                                   03/23/14 11:00:09 Page 10
+Q          1.0000         1.0000         1.0000          .          
+j1         1.0000         1.0000         1.0000          .          
+j2         1.0000         1.0000         1.0000          .          
+j3         1.0000         1.0000         1.0000          .          
+j4         1.0000         1.0000         1.0000          .          
+j5         1.0000         1.0000         1.0000          .          
+j6         1.0000         1.0000         1.0000          .          
+j7         1.0000         1.0000         1.0000          .          
+j8         1.0000         1.0000         1.0000          .          
+j9         1.0000         1.0000         1.0000          .          
+S          1.0000         1.0000         1.0000          .          
+GAMS 24.2.1  r43572 Released Dec  9, 2013 WEX-WEI x86_64/MS Windows                                                                                                                                                                   03/23/14 16:51:06 Page 10
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE RCPSP Using MIP From line 163
 
 
 ---- EQU Projektstruktur  
 
-               LOWER          LEVEL          UPPER         MARGINAL
+             LOWER          LEVEL          UPPER         MARGINAL
 
-Q  .j37        -INF             .              .              .          
-Q  .j38        -INF           -2.0000          .              .          
-Q  .j39        -INF           -5.0000          .              .          
-Q  .j40        -INF           -6.0000          .              .          
-Q  .j41        -INF          -13.0000          .              .          
-Q  .j42        -INF          -13.0000          .              .          
-Q  .j43        -INF          -14.0000          .              .          
-Q  .j44        -INF          -23.0000          .              .          
-Q  .j45        -INF          -19.0000          .              .          
-j37.j38        -INF             .              .              .          
-j37.j39        -INF           -3.0000          .              .          
-j37.S          -INF          -24.0000          .              .          
-j38.j40        -INF             .              .              .          
-j38.S          -INF          -20.0000          .              .          
-j39.j43        -INF           -6.0000          .              .          
-j39.S          -INF          -18.0000          .              .          
-j40.j41        -INF             .              .              .          
-j40.j42        -INF             .              .              .          
-j40.S          -INF          -13.0000          .              .          
-j41.j44        -INF           -8.0000          .              .          
-j41.j45        -INF           -4.0000          .              .          
-j41.S          -INF          -11.0000          .              .          
-j42.j43        -INF             .              .              .          
-j42.S          -INF          -12.0000          .              .          
-j43.j45        -INF             .              .              .          
-j43.S          -INF           -7.0000          .              .          
-j44.S          -INF           -1.0000          .              .          
-j45.S          -INF             .              .              .          
+Q .j1        -INF             .              .              .          
+Q .j2        -INF           -2.0000          .              .          
+Q .j3        -INF           -5.0000          .              .          
+Q .j4        -INF           -6.0000          .              .          
+Q .j5        -INF          -13.0000          .              .          
+Q .j6        -INF          -13.0000          .              .          
+Q .j7        -INF          -14.0000          .              .          
+Q .j8        -INF          -23.0000          .              .          
+Q .j9        -INF          -19.0000          .              .          
+j1.j2        -INF             .              .              .          
+j1.j3        -INF           -3.0000          .              .          
+j1.S         -INF          -24.0000          .              .          
+j2.j4        -INF             .              .              .          
+j2.S         -INF          -20.0000          .              .          
+j3.j7        -INF           -6.0000          .              .          
+j3.S         -INF          -18.0000          .              .          
+j4.j5        -INF             .              .              .          
+j4.j6        -INF             .              .              .          
+j4.S         -INF          -13.0000          .              .          
+j5.j8        -INF           -8.0000          .              .          
+j5.j9        -INF           -4.0000          .              .          
+j5.S         -INF          -11.0000          .              .          
+j6.j7        -INF             .              .              .          
+j6.S         -INF          -12.0000          .              .          
+j7.j9        -INF             .              .              .          
+j7.S         -INF           -7.0000          .              .          
+j8.S         -INF           -1.0000          .              .          
+j9.S         -INF             .              .              .          
 
 ---- EQU Kapazitaetsrestriktion  
 
               LOWER          LEVEL          UPPER         MARGINAL
 
-r5.t0         -INF             .             9.0000          .          
-r5.t1         -INF            1.0000         9.0000          .          
-r5.t2         -INF            1.0000         9.0000          .          
-r5.t3         -INF            2.0000         9.0000          .          
-r5.t4         -INF            2.0000         9.0000          .          
-r5.t5         -INF            2.0000         9.0000          .          
-r5.t6         -INF            8.0000         9.0000          .          
-r5.t7         -INF            7.0000         9.0000          .          
-r5.t8         -INF            7.0000         9.0000          .          
-r5.t9         -INF            1.0000         9.0000          .          
-r5.t10        -INF            1.0000         9.0000          .          
-r5.t11        -INF            1.0000         9.0000          .          
-r5.t12        -INF            1.0000         9.0000          .          
-r5.t13        -INF            1.0000         9.0000          .          
-r5.t14        -INF            3.0000         9.0000          .          
-r5.t15        -INF            3.0000         9.0000          .          
-GAMS 24.1.3  r41464 Released Jul 26, 2013 WEX-WEI x86_64/MS Windows                                                                                                                                                                   03/23/14 11:00:09 Page 11
+r1.t0         -INF             .             9.0000          .          
+r1.t1         -INF            1.0000         9.0000          .          
+r1.t2         -INF            1.0000         9.0000          .          
+r1.t3         -INF            2.0000         9.0000          .          
+r1.t4         -INF            2.0000         9.0000          .          
+r1.t5         -INF            2.0000         9.0000          .          
+r1.t6         -INF            8.0000         9.0000          .          
+r1.t7         -INF            7.0000         9.0000          .          
+r1.t8         -INF            7.0000         9.0000          .          
+r1.t9         -INF            1.0000         9.0000          .          
+r1.t10        -INF            1.0000         9.0000          .          
+r1.t11        -INF            1.0000         9.0000          .          
+r1.t12        -INF            1.0000         9.0000          .          
+r1.t13        -INF            1.0000         9.0000          .          
+r1.t14        -INF            3.0000         9.0000          .          
+r1.t15        -INF            3.0000         9.0000          .          
+GAMS 24.2.1  r43572 Released Dec  9, 2013 WEX-WEI x86_64/MS Windows                                                                                                                                                                   03/23/14 16:51:06 Page 11
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE RCPSP Using MIP From line 163
 
@@ -441,434 +443,434 @@ Solution Report     SOLVE RCPSP Using MIP From line 163
 
               LOWER          LEVEL          UPPER         MARGINAL
 
-r5.t16        -INF            2.0000         9.0000          .          
-r5.t17        -INF            2.0000         9.0000          .          
-r5.t18        -INF            2.0000         9.0000          .          
-r5.t19        -INF            2.0000         9.0000          .          
-r5.t20        -INF            8.0000         9.0000          .          
-r5.t21        -INF            8.0000         9.0000          .          
-r5.t22        -INF            8.0000         9.0000          .          
-r5.t23        -INF            8.0000         9.0000          .          
-r5.t24        -INF            9.0000         9.0000          .          
-r5.t25        -INF            9.0000         9.0000          .          
-r5.t26        -INF            8.0000         9.0000          .          
-r5.t27        -INF             .             9.0000          .          
-r5.t28        -INF             .             9.0000          .          
-r5.t29        -INF             .             9.0000          .          
-r5.t30        -INF             .             9.0000          .          
-r5.t31        -INF             .             9.0000          .          
-r5.t32        -INF             .             9.0000          .          
-r5.t33        -INF             .             9.0000          .          
+r1.t16        -INF            2.0000         9.0000          .          
+r1.t17        -INF            2.0000         9.0000          .          
+r1.t18        -INF            2.0000         9.0000          .          
+r1.t19        -INF            2.0000         9.0000          .          
+r1.t20        -INF            8.0000         9.0000          .          
+r1.t21        -INF            8.0000         9.0000          .          
+r1.t22        -INF            8.0000         9.0000          .          
+r1.t23        -INF            8.0000         9.0000          .          
+r1.t24        -INF            9.0000         9.0000          .          
+r1.t25        -INF            9.0000         9.0000          .          
+r1.t26        -INF            8.0000         9.0000          .          
+r1.t27        -INF             .             9.0000          .          
+r1.t28        -INF             .             9.0000          .          
+r1.t29        -INF             .             9.0000          .          
+r1.t30        -INF             .             9.0000          .          
+r1.t31        -INF             .             9.0000          .          
+r1.t32        -INF             .             9.0000          .          
+r1.t33        -INF             .             9.0000          .          
 
 ---- VAR x  nimmt den Wert 1 an wenn der Arbeitsgang j in Periode t beendet wird und 0 sonst
 
-               LOWER          LEVEL          UPPER         MARGINAL
+              LOWER          LEVEL          UPPER         MARGINAL
 
-Q  .t0           .             1.0000         1.0000         EPS         
-Q  .t1           .              .             1.0000         EPS         
-j37.t0           .              .             1.0000         EPS         
-j37.t1           .              .             1.0000         EPS         
-j37.t2           .             1.0000         1.0000         EPS         
-j37.t3           .              .             1.0000         EPS         
-j37.t4           .              .             1.0000         EPS         
-j37.t5           .              .             1.0000         EPS         
-j37.t6           .              .             1.0000         EPS         
-j37.t7           .              .             1.0000         EPS         
-j37.t8           .              .             1.0000         EPS         
-j37.t9           .              .             1.0000         EPS         
-j37.t10          .              .             1.0000         EPS         
-j37.t11          .              .             1.0000         EPS         
-j37.t12          .              .             1.0000         EPS         
-j37.t13          .              .             1.0000         EPS         
-j37.t14          .              .             1.0000         EPS         
-j37.t15          .              .             1.0000         EPS         
-j37.t16          .              .             1.0000         EPS         
-j37.t17          .              .             1.0000         EPS         
-j37.t18          .              .             1.0000         EPS         
-j37.t19          .              .             1.0000         EPS         
-j37.t20          .              .             1.0000         EPS         
-j37.t21          .              .             1.0000         EPS         
-j37.t22          .              .             1.0000         EPS         
-j37.t23          .              .             1.0000         EPS         
-GAMS 24.1.3  r41464 Released Jul 26, 2013 WEX-WEI x86_64/MS Windows                                                                                                                                                                   03/23/14 11:00:09 Page 12
+Q .t0           .             1.0000         1.0000         EPS         
+Q .t1           .              .             1.0000         EPS         
+j1.t0           .              .             1.0000         EPS         
+j1.t1           .              .             1.0000         EPS         
+j1.t2           .             1.0000         1.0000         EPS         
+j1.t3           .              .             1.0000         EPS         
+j1.t4           .              .             1.0000         EPS         
+j1.t5           .              .             1.0000         EPS         
+j1.t6           .              .             1.0000         EPS         
+j1.t7           .              .             1.0000         EPS         
+j1.t8           .              .             1.0000         EPS         
+j1.t9           .              .             1.0000         EPS         
+j1.t10          .              .             1.0000         EPS         
+j1.t11          .              .             1.0000         EPS         
+j1.t12          .              .             1.0000         EPS         
+j1.t13          .              .             1.0000         EPS         
+j1.t14          .              .             1.0000         EPS         
+j1.t15          .              .             1.0000         EPS         
+j1.t16          .              .             1.0000         EPS         
+j1.t17          .              .             1.0000         EPS         
+j1.t18          .              .             1.0000         EPS         
+j1.t19          .              .             1.0000         EPS         
+j1.t20          .              .             1.0000         EPS         
+j1.t21          .              .             1.0000         EPS         
+j1.t22          .              .             1.0000         EPS         
+j1.t23          .              .             1.0000         EPS         
+GAMS 24.2.1  r43572 Released Dec  9, 2013 WEX-WEI x86_64/MS Windows                                                                                                                                                                   03/23/14 16:51:06 Page 12
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE RCPSP Using MIP From line 163
 
 
      VAR x  nimmt den Wert 1 an wenn der Arbeitsgang j in Periode t beendet wird und 0 sonst
 
-               LOWER          LEVEL          UPPER         MARGINAL
+              LOWER          LEVEL          UPPER         MARGINAL
 
-j37.t24          .              .             1.0000         EPS         
-j37.t25          .              .             1.0000         EPS         
-j37.t26          .              .             1.0000         EPS         
-j37.t27          .              .             1.0000         EPS         
-j37.t28          .              .             1.0000         EPS         
-j37.t29          .              .             1.0000         EPS         
-j37.t30          .              .             1.0000         EPS         
-j37.t31          .              .             1.0000         EPS         
-j37.t32          .              .             1.0000         EPS         
-j37.t33          .              .             1.0000         EPS         
-j38.t0           .              .             1.0000         EPS         
-j38.t1           .              .             1.0000         EPS         
-j38.t2           .              .             1.0000         EPS         
-j38.t3           .              .             1.0000         EPS         
-j38.t4           .              .             1.0000         EPS         
-j38.t5           .              .             1.0000         EPS         
-j38.t6           .             1.0000         1.0000         EPS         
-j38.t7           .              .             1.0000         EPS         
-j38.t8           .              .             1.0000         EPS         
-j38.t9           .              .             1.0000         EPS         
-j38.t10          .              .             1.0000         EPS         
-j38.t11          .              .             1.0000         EPS         
-j38.t12          .              .             1.0000         EPS         
-j38.t13          .              .             1.0000         EPS         
-j38.t14          .              .             1.0000         EPS         
-j38.t15          .              .             1.0000         EPS         
-j38.t16          .              .             1.0000         EPS         
-j38.t17          .              .             1.0000         EPS         
-j38.t18          .              .             1.0000         EPS         
-j38.t19          .              .             1.0000         EPS         
-j38.t20          .              .             1.0000         EPS         
-j38.t21          .              .             1.0000         EPS         
-j38.t22          .              .             1.0000         EPS         
-j38.t23          .              .             1.0000         EPS         
-j38.t24          .              .             1.0000         EPS         
-j38.t25          .              .             1.0000         EPS         
-j38.t26          .              .             1.0000         EPS         
-j38.t27          .              .             1.0000         EPS         
-j38.t28          .              .             1.0000         EPS         
-j38.t29          .              .             1.0000         EPS         
-j38.t30          .              .             1.0000         EPS         
-j38.t31          .              .             1.0000         EPS         
-j38.t32          .              .             1.0000         EPS         
-j38.t33          .              .             1.0000         EPS         
-j39.t0           .              .             1.0000         EPS         
-j39.t1           .              .             1.0000         EPS         
-j39.t2           .              .             1.0000         EPS         
-j39.t3           .              .             1.0000         EPS         
-j39.t4           .              .             1.0000         EPS         
-GAMS 24.1.3  r41464 Released Jul 26, 2013 WEX-WEI x86_64/MS Windows                                                                                                                                                                   03/23/14 11:00:09 Page 13
+j1.t24          .              .             1.0000         EPS         
+j1.t25          .              .             1.0000         EPS         
+j1.t26          .              .             1.0000         EPS         
+j1.t27          .              .             1.0000         EPS         
+j1.t28          .              .             1.0000         EPS         
+j1.t29          .              .             1.0000         EPS         
+j1.t30          .              .             1.0000         EPS         
+j1.t31          .              .             1.0000         EPS         
+j1.t32          .              .             1.0000         EPS         
+j1.t33          .              .             1.0000         EPS         
+j2.t0           .              .             1.0000         EPS         
+j2.t1           .              .             1.0000         EPS         
+j2.t2           .              .             1.0000         EPS         
+j2.t3           .              .             1.0000         EPS         
+j2.t4           .              .             1.0000         EPS         
+j2.t5           .              .             1.0000         EPS         
+j2.t6           .             1.0000         1.0000         EPS         
+j2.t7           .              .             1.0000         EPS         
+j2.t8           .              .             1.0000         EPS         
+j2.t9           .              .             1.0000         EPS         
+j2.t10          .              .             1.0000         EPS         
+j2.t11          .              .             1.0000         EPS         
+j2.t12          .              .             1.0000         EPS         
+j2.t13          .              .             1.0000         EPS         
+j2.t14          .              .             1.0000         EPS         
+j2.t15          .              .             1.0000         EPS         
+j2.t16          .              .             1.0000         EPS         
+j2.t17          .              .             1.0000         EPS         
+j2.t18          .              .             1.0000         EPS         
+j2.t19          .              .             1.0000         EPS         
+j2.t20          .              .             1.0000         EPS         
+j2.t21          .              .             1.0000         EPS         
+j2.t22          .              .             1.0000         EPS         
+j2.t23          .              .             1.0000         EPS         
+j2.t24          .              .             1.0000         EPS         
+j2.t25          .              .             1.0000         EPS         
+j2.t26          .              .             1.0000         EPS         
+j2.t27          .              .             1.0000         EPS         
+j2.t28          .              .             1.0000         EPS         
+j2.t29          .              .             1.0000         EPS         
+j2.t30          .              .             1.0000         EPS         
+j2.t31          .              .             1.0000         EPS         
+j2.t32          .              .             1.0000         EPS         
+j2.t33          .              .             1.0000         EPS         
+j3.t0           .              .             1.0000         EPS         
+j3.t1           .              .             1.0000         EPS         
+j3.t2           .              .             1.0000         EPS         
+j3.t3           .              .             1.0000         EPS         
+j3.t4           .              .             1.0000         EPS         
+GAMS 24.2.1  r43572 Released Dec  9, 2013 WEX-WEI x86_64/MS Windows                                                                                                                                                                   03/23/14 16:51:06 Page 13
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE RCPSP Using MIP From line 163
 
 
      VAR x  nimmt den Wert 1 an wenn der Arbeitsgang j in Periode t beendet wird und 0 sonst
 
-               LOWER          LEVEL          UPPER         MARGINAL
+              LOWER          LEVEL          UPPER         MARGINAL
 
-j39.t5           .              .             1.0000         EPS         
-j39.t6           .              .             1.0000         EPS         
-j39.t7           .              .             1.0000         EPS         
-j39.t8           .             1.0000         1.0000         EPS         
-j39.t9           .              .             1.0000         EPS         
-j39.t10          .              .             1.0000         EPS         
-j39.t11          .              .             1.0000         EPS         
-j39.t12          .              .             1.0000         EPS         
-j39.t13          .              .             1.0000         EPS         
-j39.t14          .              .             1.0000         EPS         
-j39.t15          .              .             1.0000         EPS         
-j39.t16          .              .             1.0000         EPS         
-j39.t17          .              .             1.0000         EPS         
-j39.t18          .              .             1.0000         EPS         
-j39.t19          .              .             1.0000         EPS         
-j39.t20          .              .             1.0000         EPS         
-j39.t21          .              .             1.0000         EPS         
-j39.t22          .              .             1.0000         EPS         
-j39.t23          .              .             1.0000         EPS         
-j39.t24          .              .             1.0000         EPS         
-j39.t25          .              .             1.0000         EPS         
-j39.t26          .              .             1.0000         EPS         
-j39.t27          .              .             1.0000         EPS         
-j39.t28          .              .             1.0000         EPS         
-j39.t29          .              .             1.0000         EPS         
-j39.t30          .              .             1.0000         EPS         
-j39.t31          .              .             1.0000         EPS         
-j39.t32          .              .             1.0000         EPS         
-j39.t33          .              .             1.0000         EPS         
-j40.t0           .              .             1.0000         EPS         
-j40.t1           .              .             1.0000         EPS         
-j40.t2           .              .             1.0000         EPS         
-j40.t3           .              .             1.0000         EPS         
-j40.t4           .              .             1.0000         EPS         
-j40.t5           .              .             1.0000         EPS         
-j40.t6           .              .             1.0000         EPS         
-j40.t7           .              .             1.0000         EPS         
-j40.t8           .              .             1.0000         EPS         
-j40.t9           .              .             1.0000         EPS         
-j40.t10          .              .             1.0000         EPS         
-j40.t11          .              .             1.0000         EPS         
-j40.t12          .              .             1.0000         EPS         
-j40.t13          .             1.0000         1.0000         EPS         
-j40.t14          .              .             1.0000         EPS         
-j40.t15          .              .             1.0000         EPS         
-j40.t16          .              .             1.0000         EPS         
-j40.t17          .              .             1.0000         EPS         
-j40.t18          .              .             1.0000         EPS         
-j40.t19          .              .             1.0000         EPS         
-GAMS 24.1.3  r41464 Released Jul 26, 2013 WEX-WEI x86_64/MS Windows                                                                                                                                                                   03/23/14 11:00:09 Page 14
+j3.t5           .              .             1.0000         EPS         
+j3.t6           .              .             1.0000         EPS         
+j3.t7           .              .             1.0000         EPS         
+j3.t8           .             1.0000         1.0000         EPS         
+j3.t9           .              .             1.0000         EPS         
+j3.t10          .              .             1.0000         EPS         
+j3.t11          .              .             1.0000         EPS         
+j3.t12          .              .             1.0000         EPS         
+j3.t13          .              .             1.0000         EPS         
+j3.t14          .              .             1.0000         EPS         
+j3.t15          .              .             1.0000         EPS         
+j3.t16          .              .             1.0000         EPS         
+j3.t17          .              .             1.0000         EPS         
+j3.t18          .              .             1.0000         EPS         
+j3.t19          .              .             1.0000         EPS         
+j3.t20          .              .             1.0000         EPS         
+j3.t21          .              .             1.0000         EPS         
+j3.t22          .              .             1.0000         EPS         
+j3.t23          .              .             1.0000         EPS         
+j3.t24          .              .             1.0000         EPS         
+j3.t25          .              .             1.0000         EPS         
+j3.t26          .              .             1.0000         EPS         
+j3.t27          .              .             1.0000         EPS         
+j3.t28          .              .             1.0000         EPS         
+j3.t29          .              .             1.0000         EPS         
+j3.t30          .              .             1.0000         EPS         
+j3.t31          .              .             1.0000         EPS         
+j3.t32          .              .             1.0000         EPS         
+j3.t33          .              .             1.0000         EPS         
+j4.t0           .              .             1.0000         EPS         
+j4.t1           .              .             1.0000         EPS         
+j4.t2           .              .             1.0000         EPS         
+j4.t3           .              .             1.0000         EPS         
+j4.t4           .              .             1.0000         EPS         
+j4.t5           .              .             1.0000         EPS         
+j4.t6           .              .             1.0000         EPS         
+j4.t7           .              .             1.0000         EPS         
+j4.t8           .              .             1.0000         EPS         
+j4.t9           .              .             1.0000         EPS         
+j4.t10          .              .             1.0000         EPS         
+j4.t11          .              .             1.0000         EPS         
+j4.t12          .              .             1.0000         EPS         
+j4.t13          .             1.0000         1.0000         EPS         
+j4.t14          .              .             1.0000         EPS         
+j4.t15          .              .             1.0000         EPS         
+j4.t16          .              .             1.0000         EPS         
+j4.t17          .              .             1.0000         EPS         
+j4.t18          .              .             1.0000         EPS         
+j4.t19          .              .             1.0000         EPS         
+GAMS 24.2.1  r43572 Released Dec  9, 2013 WEX-WEI x86_64/MS Windows                                                                                                                                                                   03/23/14 16:51:06 Page 14
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE RCPSP Using MIP From line 163
 
 
      VAR x  nimmt den Wert 1 an wenn der Arbeitsgang j in Periode t beendet wird und 0 sonst
 
-               LOWER          LEVEL          UPPER         MARGINAL
+              LOWER          LEVEL          UPPER         MARGINAL
 
-j40.t20          .              .             1.0000         EPS         
-j40.t21          .              .             1.0000         EPS         
-j40.t22          .              .             1.0000         EPS         
-j40.t23          .              .             1.0000         EPS         
-j40.t24          .              .             1.0000         EPS         
-j40.t25          .              .             1.0000         EPS         
-j40.t26          .              .             1.0000         EPS         
-j40.t27          .              .             1.0000         EPS         
-j40.t28          .              .             1.0000         EPS         
-j40.t29          .              .             1.0000         EPS         
-j40.t30          .              .             1.0000         EPS         
-j40.t31          .              .             1.0000         EPS         
-j40.t32          .              .             1.0000         EPS         
-j40.t33          .              .             1.0000         EPS         
-j41.t0           .              .             1.0000         EPS         
-j41.t1           .              .             1.0000         EPS         
-j41.t2           .              .             1.0000         EPS         
-j41.t3           .              .             1.0000         EPS         
-j41.t4           .              .             1.0000         EPS         
-j41.t5           .              .             1.0000         EPS         
-j41.t6           .              .             1.0000         EPS         
-j41.t7           .              .             1.0000         EPS         
-j41.t8           .              .             1.0000         EPS         
-j41.t9           .              .             1.0000         EPS         
-j41.t10          .              .             1.0000         EPS         
-j41.t11          .              .             1.0000         EPS         
-j41.t12          .              .             1.0000         EPS         
-j41.t13          .              .             1.0000         EPS         
-j41.t14          .              .             1.0000         EPS         
-j41.t15          .             1.0000         1.0000         EPS         
-j41.t16          .              .             1.0000         EPS         
-j41.t17          .              .             1.0000         EPS         
-j41.t18          .              .             1.0000         EPS         
-j41.t19          .              .             1.0000         EPS         
-j41.t20          .              .             1.0000         EPS         
-j41.t21          .              .             1.0000         EPS         
-j41.t22          .              .             1.0000         EPS         
-j41.t23          .              .             1.0000         EPS         
-j41.t24          .              .             1.0000         EPS         
-j41.t25          .              .             1.0000         EPS         
-j41.t26          .              .             1.0000         EPS         
-j41.t27          .              .             1.0000         EPS         
-j41.t28          .              .             1.0000         EPS         
-j41.t29          .              .             1.0000         EPS         
-j41.t30          .              .             1.0000         EPS         
-j41.t31          .              .             1.0000         EPS         
-j41.t32          .              .             1.0000         EPS         
-j41.t33          .              .             1.0000         EPS         
-j42.t0           .              .             1.0000         EPS         
-GAMS 24.1.3  r41464 Released Jul 26, 2013 WEX-WEI x86_64/MS Windows                                                                                                                                                                   03/23/14 11:00:09 Page 15
+j4.t20          .              .             1.0000         EPS         
+j4.t21          .              .             1.0000         EPS         
+j4.t22          .              .             1.0000         EPS         
+j4.t23          .              .             1.0000         EPS         
+j4.t24          .              .             1.0000         EPS         
+j4.t25          .              .             1.0000         EPS         
+j4.t26          .              .             1.0000         EPS         
+j4.t27          .              .             1.0000         EPS         
+j4.t28          .              .             1.0000         EPS         
+j4.t29          .              .             1.0000         EPS         
+j4.t30          .              .             1.0000         EPS         
+j4.t31          .              .             1.0000         EPS         
+j4.t32          .              .             1.0000         EPS         
+j4.t33          .              .             1.0000         EPS         
+j5.t0           .              .             1.0000         EPS         
+j5.t1           .              .             1.0000         EPS         
+j5.t2           .              .             1.0000         EPS         
+j5.t3           .              .             1.0000         EPS         
+j5.t4           .              .             1.0000         EPS         
+j5.t5           .              .             1.0000         EPS         
+j5.t6           .              .             1.0000         EPS         
+j5.t7           .              .             1.0000         EPS         
+j5.t8           .              .             1.0000         EPS         
+j5.t9           .              .             1.0000         EPS         
+j5.t10          .              .             1.0000         EPS         
+j5.t11          .              .             1.0000         EPS         
+j5.t12          .              .             1.0000         EPS         
+j5.t13          .              .             1.0000         EPS         
+j5.t14          .              .             1.0000         EPS         
+j5.t15          .             1.0000         1.0000         EPS         
+j5.t16          .              .             1.0000         EPS         
+j5.t17          .              .             1.0000         EPS         
+j5.t18          .              .             1.0000         EPS         
+j5.t19          .              .             1.0000         EPS         
+j5.t20          .              .             1.0000         EPS         
+j5.t21          .              .             1.0000         EPS         
+j5.t22          .              .             1.0000         EPS         
+j5.t23          .              .             1.0000         EPS         
+j5.t24          .              .             1.0000         EPS         
+j5.t25          .              .             1.0000         EPS         
+j5.t26          .              .             1.0000         EPS         
+j5.t27          .              .             1.0000         EPS         
+j5.t28          .              .             1.0000         EPS         
+j5.t29          .              .             1.0000         EPS         
+j5.t30          .              .             1.0000         EPS         
+j5.t31          .              .             1.0000         EPS         
+j5.t32          .              .             1.0000         EPS         
+j5.t33          .              .             1.0000         EPS         
+j6.t0           .              .             1.0000         EPS         
+GAMS 24.2.1  r43572 Released Dec  9, 2013 WEX-WEI x86_64/MS Windows                                                                                                                                                                   03/23/14 16:51:06 Page 15
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE RCPSP Using MIP From line 163
 
 
      VAR x  nimmt den Wert 1 an wenn der Arbeitsgang j in Periode t beendet wird und 0 sonst
 
-               LOWER          LEVEL          UPPER         MARGINAL
+              LOWER          LEVEL          UPPER         MARGINAL
 
-j42.t1           .              .             1.0000         EPS         
-j42.t2           .              .             1.0000         EPS         
-j42.t3           .              .             1.0000         EPS         
-j42.t4           .              .             1.0000         EPS         
-j42.t5           .              .             1.0000         EPS         
-j42.t6           .              .             1.0000         EPS         
-j42.t7           .              .             1.0000         EPS         
-j42.t8           .              .             1.0000         EPS         
-j42.t9           .              .             1.0000         EPS         
-j42.t10          .              .             1.0000         EPS         
-j42.t11          .              .             1.0000         EPS         
-j42.t12          .              .             1.0000         EPS         
-j42.t13          .              .             1.0000         EPS         
-j42.t14          .             1.0000         1.0000         EPS         
-j42.t15          .              .             1.0000         EPS         
-j42.t16          .              .             1.0000         EPS         
-j42.t17          .              .             1.0000         EPS         
-j42.t18          .              .             1.0000         EPS         
-j42.t19          .              .             1.0000         EPS         
-j42.t20          .              .             1.0000         EPS         
-j42.t21          .              .             1.0000         EPS         
-j42.t22          .              .             1.0000         EPS         
-j42.t23          .              .             1.0000         EPS         
-j42.t24          .              .             1.0000         EPS         
-j42.t25          .              .             1.0000         EPS         
-j42.t26          .              .             1.0000         EPS         
-j42.t27          .              .             1.0000         EPS         
-j42.t28          .              .             1.0000         EPS         
-j42.t29          .              .             1.0000         EPS         
-j42.t30          .              .             1.0000         EPS         
-j42.t31          .              .             1.0000         EPS         
-j42.t32          .              .             1.0000         EPS         
-j42.t33          .              .             1.0000         EPS         
-j43.t0           .              .             1.0000         EPS         
-j43.t1           .              .             1.0000         EPS         
-j43.t2           .              .             1.0000         EPS         
-j43.t3           .              .             1.0000         EPS         
-j43.t4           .              .             1.0000         EPS         
-j43.t5           .              .             1.0000         EPS         
-j43.t6           .              .             1.0000         EPS         
-j43.t7           .              .             1.0000         EPS         
-j43.t8           .              .             1.0000         EPS         
-j43.t9           .              .             1.0000         EPS         
-j43.t10          .              .             1.0000         EPS         
-j43.t11          .              .             1.0000         EPS         
-j43.t12          .              .             1.0000         EPS         
-j43.t13          .              .             1.0000         EPS         
-j43.t14          .              .             1.0000         EPS         
-j43.t15          .              .             1.0000         EPS         
-GAMS 24.1.3  r41464 Released Jul 26, 2013 WEX-WEI x86_64/MS Windows                                                                                                                                                                   03/23/14 11:00:09 Page 16
+j6.t1           .              .             1.0000         EPS         
+j6.t2           .              .             1.0000         EPS         
+j6.t3           .              .             1.0000         EPS         
+j6.t4           .              .             1.0000         EPS         
+j6.t5           .              .             1.0000         EPS         
+j6.t6           .              .             1.0000         EPS         
+j6.t7           .              .             1.0000         EPS         
+j6.t8           .              .             1.0000         EPS         
+j6.t9           .              .             1.0000         EPS         
+j6.t10          .              .             1.0000         EPS         
+j6.t11          .              .             1.0000         EPS         
+j6.t12          .              .             1.0000         EPS         
+j6.t13          .              .             1.0000         EPS         
+j6.t14          .             1.0000         1.0000         EPS         
+j6.t15          .              .             1.0000         EPS         
+j6.t16          .              .             1.0000         EPS         
+j6.t17          .              .             1.0000         EPS         
+j6.t18          .              .             1.0000         EPS         
+j6.t19          .              .             1.0000         EPS         
+j6.t20          .              .             1.0000         EPS         
+j6.t21          .              .             1.0000         EPS         
+j6.t22          .              .             1.0000         EPS         
+j6.t23          .              .             1.0000         EPS         
+j6.t24          .              .             1.0000         EPS         
+j6.t25          .              .             1.0000         EPS         
+j6.t26          .              .             1.0000         EPS         
+j6.t27          .              .             1.0000         EPS         
+j6.t28          .              .             1.0000         EPS         
+j6.t29          .              .             1.0000         EPS         
+j6.t30          .              .             1.0000         EPS         
+j6.t31          .              .             1.0000         EPS         
+j6.t32          .              .             1.0000         EPS         
+j6.t33          .              .             1.0000         EPS         
+j7.t0           .              .             1.0000         EPS         
+j7.t1           .              .             1.0000         EPS         
+j7.t2           .              .             1.0000         EPS         
+j7.t3           .              .             1.0000         EPS         
+j7.t4           .              .             1.0000         EPS         
+j7.t5           .              .             1.0000         EPS         
+j7.t6           .              .             1.0000         EPS         
+j7.t7           .              .             1.0000         EPS         
+j7.t8           .              .             1.0000         EPS         
+j7.t9           .              .             1.0000         EPS         
+j7.t10          .              .             1.0000         EPS         
+j7.t11          .              .             1.0000         EPS         
+j7.t12          .              .             1.0000         EPS         
+j7.t13          .              .             1.0000         EPS         
+j7.t14          .              .             1.0000         EPS         
+j7.t15          .              .             1.0000         EPS         
+GAMS 24.2.1  r43572 Released Dec  9, 2013 WEX-WEI x86_64/MS Windows                                                                                                                                                                   03/23/14 16:51:06 Page 16
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE RCPSP Using MIP From line 163
 
 
      VAR x  nimmt den Wert 1 an wenn der Arbeitsgang j in Periode t beendet wird und 0 sonst
 
-               LOWER          LEVEL          UPPER         MARGINAL
+              LOWER          LEVEL          UPPER         MARGINAL
 
-j43.t16          .              .             1.0000         EPS         
-j43.t17          .              .             1.0000         EPS         
-j43.t18          .              .             1.0000         EPS         
-j43.t19          .             1.0000         1.0000         EPS         
-j43.t20          .              .             1.0000         EPS         
-j43.t21          .              .             1.0000         EPS         
-j43.t22          .              .             1.0000         EPS         
-j43.t23          .              .             1.0000         EPS         
-j43.t24          .              .             1.0000         EPS         
-j43.t25          .              .             1.0000         EPS         
-j43.t26          .              .             1.0000         EPS         
-j43.t27          .              .             1.0000         EPS         
-j43.t28          .              .             1.0000         EPS         
-j43.t29          .              .             1.0000         EPS         
-j43.t30          .              .             1.0000         EPS         
-j43.t31          .              .             1.0000         EPS         
-j43.t32          .              .             1.0000         EPS         
-j43.t33          .              .             1.0000         EPS         
-j44.t0           .              .             1.0000         EPS         
-j44.t1           .              .             1.0000         EPS         
-j44.t2           .              .             1.0000         EPS         
-j44.t3           .              .             1.0000         EPS         
-j44.t4           .              .             1.0000         EPS         
-j44.t5           .              .             1.0000         EPS         
-j44.t6           .              .             1.0000         EPS         
-j44.t7           .              .             1.0000         EPS         
-j44.t8           .              .             1.0000         EPS         
-j44.t9           .              .             1.0000         EPS         
-j44.t10          .              .             1.0000         EPS         
-j44.t11          .              .             1.0000         EPS         
-j44.t12          .              .             1.0000         EPS         
-j44.t13          .              .             1.0000         EPS         
-j44.t14          .              .             1.0000         EPS         
-j44.t15          .              .             1.0000         EPS         
-j44.t16          .              .             1.0000         EPS         
-j44.t17          .              .             1.0000         EPS         
-j44.t18          .              .             1.0000         EPS         
-j44.t19          .              .             1.0000         EPS         
-j44.t20          .              .             1.0000         EPS         
-j44.t21          .              .             1.0000         EPS         
-j44.t22          .              .             1.0000         EPS         
-j44.t23          .              .             1.0000         EPS         
-j44.t24          .              .             1.0000         EPS         
-j44.t25          .             1.0000         1.0000         EPS         
-j44.t26          .              .             1.0000         EPS         
-j44.t27          .              .             1.0000         EPS         
-j44.t28          .              .             1.0000         EPS         
-j44.t29          .              .             1.0000         EPS         
-j44.t30          .              .             1.0000         EPS         
-GAMS 24.1.3  r41464 Released Jul 26, 2013 WEX-WEI x86_64/MS Windows                                                                                                                                                                   03/23/14 11:00:09 Page 17
+j7.t16          .              .             1.0000         EPS         
+j7.t17          .              .             1.0000         EPS         
+j7.t18          .              .             1.0000         EPS         
+j7.t19          .             1.0000         1.0000         EPS         
+j7.t20          .              .             1.0000         EPS         
+j7.t21          .              .             1.0000         EPS         
+j7.t22          .              .             1.0000         EPS         
+j7.t23          .              .             1.0000         EPS         
+j7.t24          .              .             1.0000         EPS         
+j7.t25          .              .             1.0000         EPS         
+j7.t26          .              .             1.0000         EPS         
+j7.t27          .              .             1.0000         EPS         
+j7.t28          .              .             1.0000         EPS         
+j7.t29          .              .             1.0000         EPS         
+j7.t30          .              .             1.0000         EPS         
+j7.t31          .              .             1.0000         EPS         
+j7.t32          .              .             1.0000         EPS         
+j7.t33          .              .             1.0000         EPS         
+j8.t0           .              .             1.0000         EPS         
+j8.t1           .              .             1.0000         EPS         
+j8.t2           .              .             1.0000         EPS         
+j8.t3           .              .             1.0000         EPS         
+j8.t4           .              .             1.0000         EPS         
+j8.t5           .              .             1.0000         EPS         
+j8.t6           .              .             1.0000         EPS         
+j8.t7           .              .             1.0000         EPS         
+j8.t8           .              .             1.0000         EPS         
+j8.t9           .              .             1.0000         EPS         
+j8.t10          .              .             1.0000         EPS         
+j8.t11          .              .             1.0000         EPS         
+j8.t12          .              .             1.0000         EPS         
+j8.t13          .              .             1.0000         EPS         
+j8.t14          .              .             1.0000         EPS         
+j8.t15          .              .             1.0000         EPS         
+j8.t16          .              .             1.0000         EPS         
+j8.t17          .              .             1.0000         EPS         
+j8.t18          .              .             1.0000         EPS         
+j8.t19          .              .             1.0000         EPS         
+j8.t20          .              .             1.0000         EPS         
+j8.t21          .              .             1.0000         EPS         
+j8.t22          .              .             1.0000         EPS         
+j8.t23          .              .             1.0000         EPS         
+j8.t24          .              .             1.0000         EPS         
+j8.t25          .             1.0000         1.0000         EPS         
+j8.t26          .              .             1.0000         EPS         
+j8.t27          .              .             1.0000         EPS         
+j8.t28          .              .             1.0000         EPS         
+j8.t29          .              .             1.0000         EPS         
+j8.t30          .              .             1.0000         EPS         
+GAMS 24.2.1  r43572 Released Dec  9, 2013 WEX-WEI x86_64/MS Windows                                                                                                                                                                   03/23/14 16:51:06 Page 17
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE RCPSP Using MIP From line 163
 
 
      VAR x  nimmt den Wert 1 an wenn der Arbeitsgang j in Periode t beendet wird und 0 sonst
 
-               LOWER          LEVEL          UPPER         MARGINAL
+              LOWER          LEVEL          UPPER         MARGINAL
 
-j44.t31          .              .             1.0000         EPS         
-j44.t32          .              .             1.0000         EPS         
-j44.t33          .              .             1.0000         EPS         
-j45.t0           .              .             1.0000         EPS         
-j45.t1           .              .             1.0000         EPS         
-j45.t2           .              .             1.0000         EPS         
-j45.t3           .              .             1.0000         EPS         
-j45.t4           .              .             1.0000         EPS         
-j45.t5           .              .             1.0000         EPS         
-j45.t6           .              .             1.0000         EPS         
-j45.t7           .              .             1.0000         EPS         
-j45.t8           .              .             1.0000         EPS         
-j45.t9           .              .             1.0000         EPS         
-j45.t10          .              .             1.0000         EPS         
-j45.t11          .              .             1.0000         EPS         
-j45.t12          .              .             1.0000         EPS         
-j45.t13          .              .             1.0000         EPS         
-j45.t14          .              .             1.0000         EPS         
-j45.t15          .              .             1.0000         EPS         
-j45.t16          .              .             1.0000         EPS         
-j45.t17          .              .             1.0000         EPS         
-j45.t18          .              .             1.0000         EPS         
-j45.t19          .              .             1.0000         EPS         
-j45.t20          .              .             1.0000         EPS         
-j45.t21          .              .             1.0000         EPS         
-j45.t22          .              .             1.0000         EPS         
-j45.t23          .              .             1.0000         EPS         
-j45.t24          .              .             1.0000         EPS         
-j45.t25          .              .             1.0000         EPS         
-j45.t26          .             1.0000         1.0000         EPS         
-j45.t27          .              .             1.0000         EPS         
-j45.t28          .              .             1.0000         EPS         
-j45.t29          .              .             1.0000         EPS         
-j45.t30          .              .             1.0000         EPS         
-j45.t31          .              .             1.0000         EPS         
-j45.t32          .              .             1.0000         EPS         
-j45.t33          .              .             1.0000         EPS         
-S  .t0           .              .             1.0000         EPS         
-S  .t1           .              .             1.0000         1.0000      
-S  .t2           .              .             1.0000         2.0000      
-S  .t3           .              .             1.0000         3.0000      
-S  .t4           .              .             1.0000         4.0000      
-S  .t5           .              .             1.0000         5.0000      
-S  .t6           .              .             1.0000         6.0000      
-S  .t7           .              .             1.0000         7.0000      
-S  .t8           .              .             1.0000         8.0000      
-S  .t9           .              .             1.0000         9.0000      
-S  .t10          .              .             1.0000        10.0000      
-S  .t11          .              .             1.0000        11.0000      
-GAMS 24.1.3  r41464 Released Jul 26, 2013 WEX-WEI x86_64/MS Windows                                                                                                                                                                   03/23/14 11:00:09 Page 18
+j8.t31          .              .             1.0000         EPS         
+j8.t32          .              .             1.0000         EPS         
+j8.t33          .              .             1.0000         EPS         
+j9.t0           .              .             1.0000         EPS         
+j9.t1           .              .             1.0000         EPS         
+j9.t2           .              .             1.0000         EPS         
+j9.t3           .              .             1.0000         EPS         
+j9.t4           .              .             1.0000         EPS         
+j9.t5           .              .             1.0000         EPS         
+j9.t6           .              .             1.0000         EPS         
+j9.t7           .              .             1.0000         EPS         
+j9.t8           .              .             1.0000         EPS         
+j9.t9           .              .             1.0000         EPS         
+j9.t10          .              .             1.0000         EPS         
+j9.t11          .              .             1.0000         EPS         
+j9.t12          .              .             1.0000         EPS         
+j9.t13          .              .             1.0000         EPS         
+j9.t14          .              .             1.0000         EPS         
+j9.t15          .              .             1.0000         EPS         
+j9.t16          .              .             1.0000         EPS         
+j9.t17          .              .             1.0000         EPS         
+j9.t18          .              .             1.0000         EPS         
+j9.t19          .              .             1.0000         EPS         
+j9.t20          .              .             1.0000         EPS         
+j9.t21          .              .             1.0000         EPS         
+j9.t22          .              .             1.0000         EPS         
+j9.t23          .              .             1.0000         EPS         
+j9.t24          .              .             1.0000         EPS         
+j9.t25          .              .             1.0000         EPS         
+j9.t26          .             1.0000         1.0000         EPS         
+j9.t27          .              .             1.0000         EPS         
+j9.t28          .              .             1.0000         EPS         
+j9.t29          .              .             1.0000         EPS         
+j9.t30          .              .             1.0000         EPS         
+j9.t31          .              .             1.0000         EPS         
+j9.t32          .              .             1.0000         EPS         
+j9.t33          .              .             1.0000         EPS         
+S .t0           .              .             1.0000         EPS         
+S .t1           .              .             1.0000         1.0000      
+S .t2           .              .             1.0000         2.0000      
+S .t3           .              .             1.0000         3.0000      
+S .t4           .              .             1.0000         4.0000      
+S .t5           .              .             1.0000         5.0000      
+S .t6           .              .             1.0000         6.0000      
+S .t7           .              .             1.0000         7.0000      
+S .t8           .              .             1.0000         8.0000      
+S .t9           .              .             1.0000         9.0000      
+S .t10          .              .             1.0000        10.0000      
+S .t11          .              .             1.0000        11.0000      
+GAMS 24.2.1  r43572 Released Dec  9, 2013 WEX-WEI x86_64/MS Windows                                                                                                                                                                   03/23/14 16:51:06 Page 18
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE RCPSP Using MIP From line 163
 
 
      VAR x  nimmt den Wert 1 an wenn der Arbeitsgang j in Periode t beendet wird und 0 sonst
 
-               LOWER          LEVEL          UPPER         MARGINAL
+              LOWER          LEVEL          UPPER         MARGINAL
 
-S  .t12          .              .             1.0000        12.0000      
-S  .t13          .              .             1.0000        13.0000      
-S  .t14          .              .             1.0000        14.0000      
-S  .t15          .              .             1.0000        15.0000      
-S  .t16          .              .             1.0000        16.0000      
-S  .t17          .              .             1.0000        17.0000      
-S  .t18          .              .             1.0000        18.0000      
-S  .t19          .              .             1.0000        19.0000      
-S  .t20          .              .             1.0000        20.0000      
-S  .t21          .              .             1.0000        21.0000      
-S  .t22          .              .             1.0000        22.0000      
-S  .t23          .              .             1.0000        23.0000      
-S  .t24          .              .             1.0000        24.0000      
-S  .t25          .              .             1.0000        25.0000      
-S  .t26          .             1.0000         1.0000        26.0000      
-S  .t27          .              .             1.0000        27.0000      
-S  .t28          .              .             1.0000        28.0000      
-S  .t29          .              .             1.0000        29.0000      
-S  .t30          .              .             1.0000        30.0000      
-S  .t31          .              .             1.0000        31.0000      
-S  .t32          .              .             1.0000        32.0000      
-S  .t33          .              .             1.0000        33.0000      
+S .t12          .              .             1.0000        12.0000      
+S .t13          .              .             1.0000        13.0000      
+S .t14          .              .             1.0000        14.0000      
+S .t15          .              .             1.0000        15.0000      
+S .t16          .              .             1.0000        16.0000      
+S .t17          .              .             1.0000        17.0000      
+S .t18          .              .             1.0000        18.0000      
+S .t19          .              .             1.0000        19.0000      
+S .t20          .              .             1.0000        20.0000      
+S .t21          .              .             1.0000        21.0000      
+S .t22          .              .             1.0000        22.0000      
+S .t23          .              .             1.0000        23.0000      
+S .t24          .              .             1.0000        24.0000      
+S .t25          .              .             1.0000        25.0000      
+S .t26          .             1.0000         1.0000        26.0000      
+S .t27          .              .             1.0000        27.0000      
+S .t28          .              .             1.0000        28.0000      
+S .t29          .              .             1.0000        29.0000      
+S .t30          .              .             1.0000        30.0000      
+S .t31          .              .             1.0000        31.0000      
+S .t32          .              .             1.0000        32.0000      
+S .t33          .              .             1.0000        33.0000      
 
                            LOWER          LEVEL          UPPER         MARGINAL
 
@@ -880,34 +882,34 @@ S  .t33          .              .             1.0000        33.0000
 **** REPORT SUMMARY :        0     NONOPT
                              0 INFEASIBLE
                              0  UNBOUNDED
-GAMS 24.1.3  r41464 Released Jul 26, 2013 WEX-WEI x86_64/MS Windows                                                                                                                                                                   03/23/14 11:00:09 Page 19
+GAMS 24.2.1  r43572 Released Dec  9, 2013 WEX-WEI x86_64/MS Windows                                                                                                                                                                   03/23/14 16:51:06 Page 19
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 E x e c u t i o n
 
 
 ----    165 VARIABLE x.L  nimmt den Wert 1 an wenn der Arbeitsgang j in Periode t beendet wird und 0 sonst
 
-             t0          t2          t6          t8         t13         t14         t15         t19         t25         t26
+            t0          t2          t6          t8         t13         t14         t15         t19         t25         t26
 
-Q         1.000
-j37                   1.000
-j38                               1.000
-j39                                           1.000
-j40                                                       1.000
-j41                                                                               1.000
-j42                                                                   1.000
-j43                                                                                           1.000
-j44                                                                                                       1.000
-j45                                                                                                                   1.000
-S                                                                                                                     1.000
+Q        1.000
+j1                   1.000
+j2                               1.000
+j3                                           1.000
+j4                                                       1.000
+j5                                                                               1.000
+j6                                                                   1.000
+j7                                                                                           1.000
+j8                                                                                                       1.000
+j9                                                                                                                   1.000
+S                                                                                                                    1.000
 
 
 **** REPORT FILE SUMMARY
 
-Outputfile C:\Sites\RCPSP_Toooool\Outputfile.txt
+Outputfile C:\Sites\RCPSP_Toy23\Outputfile.txt
 
 
-EXECUTION TIME       =        0.000 SECONDS      3 MB  24.1.3 r41464 WEX-WEI
+EXECUTION TIME       =        0.000 SECONDS      3 MB  24.2.1 r43572 WEX-WEI
 
 
 USER: Kurslizenz                                     S130222/0001AN-GEN
@@ -917,5 +919,5 @@ USER: Kurslizenz                                     S130222/0001AN-GEN
 
 **** FILE SUMMARY
 
-Input      C:\Sites\RCPSP_Toooool\RCPSP_Modell.gms
-Output     C:\Sites\RCPSP_Toooool\RCPSP_Modell.lst
+Input      C:\Sites\RCPSP_Toy23\RCPSP_Modell.gms
+Output     C:\Sites\RCPSP_Toy23\RCPSP_Modell.lst

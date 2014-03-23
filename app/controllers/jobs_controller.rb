@@ -178,7 +178,7 @@ class JobsController < ApplicationController
       File.delete("Outputfile.txt")
     end
 
-    system "C:\\GAMS\\win64\\24.1\\gams RCPSP_Modell"
+    system "C:\\GAMS\\win64\\24.2\\gams RCPSP_Modell"
     if File.exists?("Outputfile.txt")
       flash[:success] = "Optimization done!"
     else
