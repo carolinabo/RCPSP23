@@ -10,7 +10,7 @@
       <tr>
         <td><%= best_in_place resource, :name, :type => :input, :nil => "Click me to add content!" %></td>
         <td><%= best_in_place resource, :capacity, :type => :input %></td>
-        <td><%= link_to 'Destroy', resource, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+        <td><%= link_to 'delete', resource, method: :delete, data: {confirm: 'Are you sure?'} %></td>
       </tr>
   <% end %>
 </table>

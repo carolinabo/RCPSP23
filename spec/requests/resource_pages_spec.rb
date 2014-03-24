@@ -1,28 +1,37 @@
-#require 'spec_helper'
+require 'spec_helper'
 
-#describe "Resource pages" do
-#  subject { page }
+describe "Resources pages" do
+   subject { page }
 
-#  describe "index" do
+  let(:user) { FactoryGirl.create(:user) }
+  before { sign_in user }
 
-#  let(:user) { FactoryGirl.create(:user) }
 
-#    before do
-#      sign_in user
- #     visit resources_path
-  #  end
+   describe "resource creation" do
+     before { visit resources_path }
 
-  #  it { should have_selector('title', text: 'Resources') }
-   # it { should have_selector('h1',    text: 'Resources') }
+     describe "with valid information" do
 
- #   it 'list resources' do
- #     assign(:resource, Ressource.create(name: 'Nagel', capacity: 25))
- #
- #     render
- #
- #     rendered.should contain('Nagel')
- #     rendered.should contain(25)
-  #  end
+       before { FactoryGirl.create(:resource) }
 
-  #end
- # end
+     it "should create a resource" do
+       expect { click_link "Create a new Resource" }.to change(resource, :count).by(1)
+       before { visit new_resource_path}
+     end
+   end
+
+
+    describe "resources destruction" do
+    before { FactoryGirl.create(:resource, capacity: 6) }
+
+    describe "as correct user" do
+    before { visit resources_path }
+
+      "should delete a resource" do
+        expect { click_link "delete" }.to change(Resource, :count).by(-1)
+      end
+    end
+   end
+end
+
+

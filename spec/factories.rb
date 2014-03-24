@@ -8,6 +8,10 @@ FactoryGirl.define do
     factory :admin do
       admin true
     end
+   end
+
+  factory :resource do
+    name "Lorem ipsum"
+    capacity
   end
 end
-

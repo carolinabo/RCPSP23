@@ -1,5 +1,6 @@
 class ResourcesController < ApplicationController
   before_filter :signed_in_user
+  before_filter :admin_user,     only: :new_project
 
   def new
     @resource = Resource.new
@@ -61,5 +62,9 @@ class ResourcesController < ApplicationController
       store_location
       redirect_to signin_path, notice: "Bitte melden Sie sich an."
     end
+  end
+
+  def admin_user
+    redirect_to(root_url) unless current_user.admin?
   end
 end
